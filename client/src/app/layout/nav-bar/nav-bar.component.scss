@@ -1,0 +1,11 @@
+.navbar{
+    background: #11182b!important;
+
+    a{
+        font-size: 14px;
+        color: #fff!important;
+        &.active{
+            border-bottom: 2px solid #E11935;
+        }
+    }
+}
