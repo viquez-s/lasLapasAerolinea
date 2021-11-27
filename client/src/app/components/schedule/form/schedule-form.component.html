@@ -1,3 +1,9 @@
+<div class="row mb-5">
+  <div class="col-12 col-lg-8 align-items-end">
+    <h1 class="h2">{{editMode? 'Editar': 'Crear'}}</h1>
+  </div>
+
+</div>
 <form [formGroup]="form" (ngSubmit)="submitForm()">
   <div class="mb-3">
     <label  class="form-label">Salida</label>
