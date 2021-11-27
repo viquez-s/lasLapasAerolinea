@@ -16,6 +16,7 @@ export class ScheduleFormComponent implements OnInit {
     private service: ScheduleService
   ) {
   }
+
   form = new FormGroup({
     departure: new FormControl('', [Validators.required]),
     price: new FormControl('', Validators.required),
@@ -23,13 +24,14 @@ export class ScheduleFormComponent implements OnInit {
   list = '/schedule'
 
   editMode = false;
-  model:any = {}
+  model: any = {}
+
   ngOnInit(): void {
     this.activeRoute.params.subscribe((params) => {
       if (params.id) {
         this.editMode = true;
 
-        this.service.getById(params.id).subscribe((data) => {
+        this.service.getById(params.id).subscribe((data: any) => {
           this.model = data;
           this.form.setValue({
             departure: data.departure,
@@ -40,19 +42,21 @@ export class ScheduleFormComponent implements OnInit {
 
     });
   }
+
   navigateToList() {
     this.router.navigate([this.list]);
   }
+
   submitForm() {
     if (this.form.valid) {
       if (this.editMode) {
         this.service
           .edit(this.model._id, this.form.value)
-          .subscribe((data) => {
+          .subscribe(() => {
             this.navigateToList();
           });
       } else {
-        this.service.create(this.form.value).subscribe((data) => {
+        this.service.create(this.form.value).subscribe(() => {
           this.navigateToList();
         });
       }

@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { ScheduleService } from 'src/app/services/schedule.service';
+import {Component, OnInit} from '@angular/core';
+import {ScheduleService} from 'src/app/services/schedule.service';
 
 @Component({
   selector: 'app-list',
@@ -12,10 +12,9 @@ export class ScheduleListComponent implements OnInit {
   models:any  = []
   ngOnInit(): void {
     this.service.get().subscribe(
-      res => {
+      (res:any) => {
         this.models = res
-      },
-      err => console.log(err)
+      }
     )
 
   }

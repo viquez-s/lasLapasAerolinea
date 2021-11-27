@@ -1,0 +1,38 @@
+
+<div class="row mb-5">
+  <div class="col-12 col-lg-8 align-items-end">
+    <h1 class="h2">Rutas</h1>
+  </div>
+  <div class="col-12 col-lg-4 text-end">
+    <button class="btn btn-primary"  routerLink="/route/create">Crear</button>
+  </div>
+</div>
+
+<table class="table" *ngIf="models.length">
+  <thead>
+  <tr>
+    <th class="w-25">Nombre</th>
+    <th class="w-50">Duración</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let model of models">
+    <td>{{model.name }}</td>
+    <td>{{model.duration}}</td>
+
+    <td class="text-end">
+      <a routerLink="/route/{{model._id}}" class="edit btn btn-small btn-success rounded me-2"
+         data-toggle="modal"><i class="far fa-edit"></i></a>
+      <a (click)="delete(model._id)" class="delete btn  btn-small btn-danger rounded"
+         data-toggle="modal"><i class="far fa-trash-alt"></i></a>
+    </td>
+  </tr>
+
+  </tbody>
+</table>
+
+<div *ngIf="!models.length" class="alert alert-info" role="alert">
+  No existen datos ingresados
+</div>
+
+

@@ -1,0 +1,25 @@
+<div class="row mb-5">
+  <div class="col-12 col-lg-8 align-items-end">
+    <h1 class="h2">{{editMode? 'Editar': 'Crear'}}</h1>
+  </div>
+
+</div>
+<form [formGroup]="form" (ngSubmit)="submitForm()">
+  <div class="mb-3">
+    <label  class="form-label">Nombre</label>
+    <input formControlName="name" type="text" class="form-control" aria-describedby="emailHelp">
+  </div>
+  <div class="mb-3">
+    <label  class="form-label">Duración</label>
+    <input formControlName="duration" type="text" class="form-control" aria-describedby="emailHelp">
+  </div>
+  <div class="mb-3" *ngIf="schedulesDropdown">
+    <label  class="form-label">Horarios</label>
+    <select formControlName="schedules" multiple  class="form-control" >
+      <option *ngFor="let schedule of schedulesDropdown" [value]="schedule._id">Salida: {{schedule.departure | date: 'short'}} - Precio: {{schedule.price | currency}}</option>
+
+    </select>
+
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
