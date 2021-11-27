@@ -1,0 +1,11 @@
+<form [formGroup]="form" (ngSubmit)="submitForm()">
+  <div class="mb-3">
+    <label  class="form-label">Salida</label>
+    <input formControlName="departure" type="date" class="form-control" aria-describedby="emailHelp">
+  </div>
+  <div class="mb-3">
+    <label  class="form-label">Precio</label>
+    <textarea formControlName="price" class="form-control" aria-describedby="emailHelp"></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
