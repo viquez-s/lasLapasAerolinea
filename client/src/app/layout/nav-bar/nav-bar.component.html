@@ -17,7 +17,7 @@
           <a class="nav-link" routerLinkActive #rlr="routerLinkActive" routerLink="/route"  [ngClass]="rlr.isActive ? 'active' : ''">Rutas</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/vuelos">Vuelos</a>
+          <a class="nav-link" routerLinkActive #rlt="routerLinkActive" routerLink="/plane"  [ngClass]="rlt.isActive ? 'active' : ''">Vuelos</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/mis-vuelos">Mis Vuelos</a>
