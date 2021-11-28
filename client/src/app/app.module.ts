@@ -13,6 +13,8 @@ import {RouteFormComponent} from "./components/routes/form/route-form.component"
 import {RouteListComponent} from "./components/routes/list/route-list.component";
 import {PlaneListComponent} from "./components/planes/list/planes.component";
 import {PlaneFormComponent} from "./components/planes/form/planes-form.component";
+import {FleetFormComponent} from "./components/fleet/form/fleet-form.component";
+import {FleetListComponent} from "./components/fleet/list/fleet-list.component";
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import {PlaneFormComponent} from "./components/planes/form/planes-form.component
     RouteListComponent,
     RouteFormComponent,
     PlaneListComponent,
-    PlaneFormComponent
+    PlaneFormComponent,
+    FleetListComponent,
+    FleetFormComponent
   ],
   imports: [
     BrowserModule,
