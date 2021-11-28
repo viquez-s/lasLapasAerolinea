@@ -4,18 +4,18 @@
     <div class="col-12 col-lg-8 align-items-end">
     </div>
     <div class="col-12 col-lg-4 text-end">
-      <button class="btn btn-primary"  routerLink="/plane">Crear</button>
+      <button class="btn btn-primary"  routerLink="/plane/create">Crear</button>
     </div>
   </div>
   
   <table class="table" *ngIf="models.length">
     <thead>
     <tr>
-      <th class="w-25">capacity</th>
-      <th class="w-50">rows</th>
-      <th class="w-25">year</th>
-      <th class="w-50">model</th>
-      <th class="w-25">brand</th>
+      <th class="w-25">Capacity</th>
+      <th class="w-50">Rows</th>
+      <th class="w-25">Year</th>
+      <th class="w-50">Model</th>
+      <th class="w-25">Brand</th>
     </tr>
     </thead>
     <tbody>
@@ -25,10 +25,19 @@
       <td>{{model.year }}</td>
       <td>{{model.model }}</td>
       <td>{{model.brand }}</td>
+
+      <td class="text-end">
+        <a routerLink="/plane/{{model._id}}" class="edit btn btn-small btn-success rounded me-2"
+           data-toggle="modal"><i class="far fa-edit"></i></a>
+        <a (click)="delete(model._id)" class="delete btn  btn-small btn-danger rounded"
+           data-toggle="modal"><i class="far fa-trash-alt"></i></a>
+      </td>
       
     </tr>
     
     
+    
+
   
     </tbody>
   </table>

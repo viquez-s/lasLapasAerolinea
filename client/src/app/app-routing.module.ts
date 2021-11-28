@@ -5,6 +5,7 @@ import {ScheduleFormComponent} from "./components/schedule/form/schedule-form.co
 import {RouteListComponent} from "./components/routes/list/route-list.component";
 import {RouteFormComponent} from "./components/routes/form/route-form.component";
 import {PlaneListComponent} from "./components/planes/list/planes.component";
+import {PlaneFormComponent} from "./components/planes/form/planes-form.component";
 
 const routes: Routes = [
   {path: 'schedule', component: ScheduleListComponent,},
@@ -13,7 +14,9 @@ const routes: Routes = [
   {path: 'route', component: RouteListComponent,},
   {path: 'route/create', component: RouteFormComponent},
   {path: 'route/:id', component: RouteFormComponent},
-  {path: 'plane', component: PlaneListComponent,}
+  {path: 'plane', component: PlaneListComponent,},
+  {path: 'plane/create', component: PlaneFormComponent},
+  {path: 'plane/:id', component: PlaneFormComponent,}
 ];
 
 @NgModule({

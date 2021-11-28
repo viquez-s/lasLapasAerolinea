@@ -12,6 +12,7 @@ import {ReactiveFormsModule} from "@angular/forms";
 import {RouteFormComponent} from "./components/routes/form/route-form.component";
 import {RouteListComponent} from "./components/routes/list/route-list.component";
 import {PlaneListComponent} from "./components/planes/list/planes.component";
+import {PlaneFormComponent} from "./components/planes/form/planes-form.component";
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import {PlaneListComponent} from "./components/planes/list/planes.component";
     ScheduleFormComponent,
     RouteListComponent,
     RouteFormComponent,
-    PlaneListComponent
+    PlaneListComponent,
+    PlaneFormComponent
   ],
   imports: [
     BrowserModule,
