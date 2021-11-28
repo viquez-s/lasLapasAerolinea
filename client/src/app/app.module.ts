@@ -11,6 +11,8 @@ import {HttpClient, HttpClientModule} from "@angular/common/http";
 import {ReactiveFormsModule} from "@angular/forms";
 import {RouteFormComponent} from "./components/routes/form/route-form.component";
 import {RouteListComponent} from "./components/routes/list/route-list.component";
+import {FleetFormComponent} from "./components/fleet/form/fleet-form.component";
+import {FleetListComponent} from "./components/fleet/list/fleet-list.component";
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import {RouteListComponent} from "./components/routes/list/route-list.component"
     ScheduleListComponent,
     ScheduleFormComponent,
     RouteListComponent,
-    RouteFormComponent
+    RouteFormComponent,
+    FleetListComponent,
+    FleetFormComponent
   ],
   imports: [
     BrowserModule,
