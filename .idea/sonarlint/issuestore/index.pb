@@ -15,5 +15,3 @@ F
 server/routes/plane.js,e/2/e27ce6bf87192fdd93b8858fcb2fd50c873dfa0a
 F
 server/models/Route.js,f/c/fcbf2c8f74d08d4e7e27897d46e1509e0cdbdd57
-d
-4client/src/app/layout/nav-bar/nav-bar.component.html,c/8/c83c7e97481530cf30b3658f9521ccfda6559264

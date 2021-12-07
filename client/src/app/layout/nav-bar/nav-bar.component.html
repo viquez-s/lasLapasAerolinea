@@ -21,7 +21,7 @@
           <a class="nav-link" routerLinkActive #rlt="routerLinkActive" routerLink="/plane"  [ngClass]="rlt.isActive ? 'active' : ''">Vuelos</a>
         </li>
          <li>
-          <a class="nav-link" routerLinkActive #rlr="routerLinkActive" routerLink="/fleet" [ngClass]="rlr.isActive ? 'active' : ''">Flotas</a>
+          <a class="nav-link" routerLinkActive #rlf="routerLinkActive" routerLink="/fleet" [ngClass]="rlf.isActive ? 'active' : ''">Flotas</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/vuelos">Vuelos</a>
@@ -37,12 +37,17 @@
       <ul class="navbar-nav  mb-2 mb-lg-0 ml-auto d-flex align-items-end">
 
         <li class="nav-item">
-          <a class="nav-link" href="/registro">Registrar</a>
+          <a class="nav-link" href="/registro" *ngIf="!isUserAuthenticated()">Registrar</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link btn btn-primary" href="/login">Iniciar Sesion</a>
+          <a class="nav-link btn btn-primary" href="/login" *ngIf="!isUserAuthenticated()">Iniciar Sesion</a>
         </li>
-
+        <li class="nav-item me-4 d-flex justify-content-center align-items-center " *ngIf="isUserAuthenticated()">
+          <p class="text-white m-0 p-2">Bienvenido <span>{{username}}</span></p>
+        </li>
+        <li class="nav-item" *ngIf="isUserAuthenticated()">
+          <a class="nav-link btn btn-outline-primary" href="" (click)="logout()" >Cerrar Sesion</a>
+        </li>
       </ul>
     </div>
   </div>
