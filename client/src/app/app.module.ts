@@ -15,6 +15,11 @@ import {PlaneListComponent} from "./components/planes/list/planes.component";
 import {PlaneFormComponent} from "./components/planes/form/planes-form.component";
 import {FleetFormComponent} from "./components/fleet/form/fleet-form.component";
 import {FleetListComponent} from "./components/fleet/list/fleet-list.component";
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
+import {UserListComponent} from "./components/users/list/user-list.component";
+import {UserFormComponent} from "./components/users/form/user-form.component";
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +33,12 @@ import {FleetListComponent} from "./components/fleet/list/fleet-list.component";
     PlaneListComponent,
     PlaneFormComponent,
     FleetListComponent,
-    FleetFormComponent
+    FleetFormComponent,
+    LoginComponent,
+    RegisterComponent,
+    UserListComponent,
+    UserFormComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

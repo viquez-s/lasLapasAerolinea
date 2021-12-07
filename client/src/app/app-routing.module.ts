@@ -8,6 +8,11 @@ import {RouteListComponent} from "./components/routes/list/route-list.component"
 import {RouteFormComponent} from "./components/routes/form/route-form.component";
 import {PlaneListComponent} from "./components/planes/list/planes.component";
 import {PlaneFormComponent} from "./components/planes/form/planes-form.component";
+import { LoginComponent } from './components/login/login.component';
+import {RegisterComponent} from "./components/register/register.component";
+import { UserListComponent } from './components/users/list/user-list.component';
+import {UserFormComponent} from "./components/users/form/user-form.component";
+import {HomeComponent} from "./components/home/home.component";
 
 const routes: Routes = [
   {path: 'fleet', component: FleetListComponent,},
@@ -21,7 +26,14 @@ const routes: Routes = [
   {path: 'route/:id', component: RouteFormComponent},
   {path: 'plane', component: PlaneListComponent,},
   {path: 'plane/create', component: PlaneFormComponent},
-  {path: 'plane/:id', component: PlaneFormComponent,}
+  {path: 'plane/:id', component: PlaneFormComponent},
+  {path: 'user', component: UserListComponent},
+  {path: 'user/create', component: UserFormComponent},
+  {path: 'user/:id', component: UserFormComponent},
+  {path: 'login', component: LoginComponent},
+  {path: 'registro', component: RegisterComponent},
+  {path: '', component: HomeComponent},
+
 ];
 
 @NgModule({

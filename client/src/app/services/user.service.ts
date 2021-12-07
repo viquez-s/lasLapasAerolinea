@@ -1,26 +1,31 @@
-import { Injectable } from '@angular/core';
-import {Observable} from "rxjs";
+import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
+import {Observable} from "rxjs";
 import {environment} from "../../environments/environment";
 
-const ENDPOINT = `${environment.apiUrl}/plane`;
+
+const ENDPOINT = `${environment.apiUrl}/user`;
 const httpOptions = {
-  headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
+  headers: new HttpHeaders({'Content-Type': 'application/json'}),
 };
 
 @Injectable({
-    providedIn: 'root'
-  })
-export class PlaneService {
+  providedIn: 'root'
+})
+export class UserService {
 
-  constructor(private http: HttpClient) {}
+
+  constructor(private http: HttpClient) {
+  }
 
   get(): Observable<any> {
     return this.http.get(ENDPOINT, httpOptions);
   }
+
   create(post: any): Observable<any> {
-    return this.http.post(ENDPOINT, post);
+    return this.http.post(`${ENDPOINT}/signup`, post);
   }
+
   delete(id: string): Observable<any> {
     return this.http.delete(`${ENDPOINT}/${id}`);
   }
@@ -30,7 +35,6 @@ export class PlaneService {
   }
 
   getById(id: string): Observable<any> {
-    console.log('bioy')
     return this.http.get(`${ENDPOINT}/${id}`);
   }
 }

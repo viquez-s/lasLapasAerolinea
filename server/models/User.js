@@ -9,14 +9,14 @@ const UserSchema = new Schema({
   },
   password: {
     type: String,
-    required: true,
   },
-  role: {
+  rol: {
     type: String,
     default: "user",
     enum: ["user", "admin"],
   },
-  last_name: String,
+  name: String,
+  lastName: String,
   email: String,
   birthday: String,
   address: String,

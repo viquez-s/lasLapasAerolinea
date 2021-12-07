@@ -6,3 +6,9 @@
         color: #FFFFFF!important;
     }
 }
+input.ng-invalid.ng-dirty{
+    border-left: 4px solid #E63A56!important;
+}
+input.ng-valid{
+    border-left: 4px solid #11182B!important;
+}
