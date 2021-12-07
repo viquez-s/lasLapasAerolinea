@@ -1,0 +1,130 @@
+<div class="row">
+  <div class="col-4 mx-auto">
+    <form
+      name="form"
+      novalidate
+      [formGroup]="form" (ngSubmit)="submitForm()"
+    >
+      <div class="form-group">
+        <label for="rol">Rol</label>
+        <select
+          id="rol"
+
+          class="form-control"
+          name="rol"
+          formControlName="rol"
+        >
+          <option value="admin" selected>Admin</option>
+          <option value="user">User</option>
+        </select>
+
+      </div>  <div class="form-group">
+      <label for="username">Username</label>
+      <input
+        id="username"
+        type="text"
+        class="form-control"
+        name="username"
+        formControlName="username"
+      />
+
+    </div>
+
+
+      <div class="form-group">
+        <label for="name">Nombre</label>
+        <input
+          type="text"
+          id="name"
+          class="form-control"
+          name="name"
+          formControlName="name"
+
+
+        />
+      </div>
+      <div class="form-group">
+        <label for="name">Apellidos</label>
+        <input
+          type="text"
+          id="lastName"
+          class="form-control"
+          name="lastName"
+          formControlName="lastName"
+
+
+        />
+      </div>
+      <div class="form-group">
+        <label for="name">Correo Electrónico</label>
+        <input
+          type="email"
+          id="email"
+          class="form-control"
+          name="email"
+          formControlName="email"
+
+
+        />
+      </div>
+      <div class="form-group">
+        <label for="name">Fecha de Nacimiento</label>
+        <input
+          type="date"
+          id="birthday"
+          class="form-control"
+          name="birthday"
+          formControlName="birthday"
+
+
+        />
+      </div>
+      <div class="form-group">
+        <label for="name">Dirección</label>
+        <input
+          type="text"
+          id="address"
+          class="form-control"
+          name="address"
+          formControlName="address"
+
+
+        />
+      </div>
+      <div class="form-group">
+        <label for="name">Teléfono de trabajo</label>
+        <input
+          type="text"
+          id="work_phone"
+          class="form-control"
+          name="work_phone"
+          formControlName="work_phone"
+
+
+        />
+      </div>
+      <div class="form-group">
+        <label for="name">Celular</label>
+        <input
+          type="text"
+          id="cellphone"
+          class="form-control"
+          name="cellphone"
+          formControlName="cellphone"
+
+
+        />
+      </div>
+
+      <br>
+      <div class="form-group">
+        <button class="btn btn-primary btn-block w-100">
+          Registrar
+        </button>
+      </div>
+      <br>
+
+
+    </form>
+  </div>
+</div>
