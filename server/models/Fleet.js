@@ -6,6 +6,6 @@ const FleetSchema = new Schema({
   routes: [{ type: Schema.Types.ObjectId, ref: "Route" }],
 });
 
-const FleetModel = model("Route", FleetSchema);
+const FleetModel = model("Fleet", FleetSchema);
 
 module.exports = FleetModel;

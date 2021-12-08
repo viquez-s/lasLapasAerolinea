@@ -16,6 +16,7 @@ const userRouter = require("./routes/user");
 const planeRouter = require("./routes/plane");
 const scheduleRouter = require("./routes/schedule");
 const routeRouter = require("./routes/route");
+const fleetRouter = require("./routes/fleet");
 
 // esta linea ayuda a leer la configuracion que tenemos en el archivo .env
 dotEnv.config();
@@ -56,6 +57,7 @@ app.use("/user/", userRouter);
 app.use("/plane/", planeRouter);
 app.use("/schedule", scheduleRouter);
 app.use("/route", routeRouter);
+app.use("/fleet", fleetRouter);
 
 // iniciamos nuestro servidor
 app.listen(port, () => {
