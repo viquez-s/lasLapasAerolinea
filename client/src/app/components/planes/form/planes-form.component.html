@@ -1,0 +1,31 @@
+
+
+<div class="row mb-5">
+    <div class="col-12 col-lg-8 align-items-end">
+      <h1 class="h2">{{editMode? 'Editar': 'Crear'}}</h1>
+    </div>
+  
+  </div>
+  <form [formGroup]="form" (ngSubmit)="submitForm()">
+    <div class="mb-3">
+      <label  class="form-label">capacity</label>
+      <textarea formControlName="capacity" class="form-control" aria-describedby="emailHelp"></textarea>
+    </div>
+    <div class="mb-3">
+      <label  class="form-label">rows</label>
+      <textarea formControlName="rows" class="form-control" aria-describedby="emailHelp"></textarea>
+    </div>
+    <div class="mb-3">
+        <label  class="form-label">year</label>
+        <textarea formControlName="year" class="form-control" aria-describedby="emailHelp"></textarea>
+      </div>
+      <div class="mb-3">
+        <label  class="form-label">model</label>
+        <textarea formControlName="model" class="form-control" aria-describedby="emailHelp"></textarea>
+      </div>
+      <div class="mb-3">
+        <label  class="form-label">brand</label>
+        <textarea formControlName="brand" class="form-control" aria-describedby="emailHelp"></textarea>
+      </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
