@@ -28,12 +28,8 @@ d
 4client/src/app/components/login/login.component.scss,0/a/0ae4c0131f34c2243cb5e3906e11e9ec9d411319
 =
 server/app.js,5/a/5a213799dbe3ac4e529d1609c34bb35426f86370
-`
-0client/src/app/services/token-storage.service.ts,4/3/4366980e9d66013f5490b0ef5c9dfbee0a7bc046
 m
 =client/src/app/components/users/list/user-list.component.scss,d/7/d775d6f0c03775bdc2578a8f765425d0b362a73e
-h
-8client/src/app/components/register/register.component.ts,9/8/9890d7c0da7ce0b7b07b1124558a866997b8e677
 j
 :client/src/app/components/register/register.component.html,7/8/7852715c9a64dcb57d2b6118c65d8bf4700e4e09
 W
@@ -52,8 +48,6 @@ k
 ;client/src/app/components/users/form/user-form.component.ts,a/9/a9ff2621e49852af536dca6c28c726ec83892e5d
 E
 server/models/User.js,7/2/72308f7010b2f585b62772eb555a4d5c68c90e6b
-T
-$server/controllers/userController.js,a/e/ae7e521f8d9c845480cb258d5f5d349ce1704023
 E
 server/routes/user.js,b/1/b1aec492763e07ccee717c5f5530ea9a57d6f123
 E

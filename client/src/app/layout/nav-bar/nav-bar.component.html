@@ -11,23 +11,23 @@
           <a class="nav-link">Inicio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLinkActive #rla="routerLinkActive" routerLink="/schedule"  [ngClass]="rla.isActive ? 'active' : ''">Horarios</a>
+          <a class="nav-link" *ngIf="isUserAdmin()" routerLinkActive #rla="routerLinkActive" routerLink="/schedule"  [ngClass]="rla.isActive ? 'active' : ''">Horarios</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLinkActive #rlr="routerLinkActive" routerLink="/route"  [ngClass]="rlr.isActive ? 'active' : ''">Rutas</a>
+          <a class="nav-link" *ngIf="isUserAdmin()"routerLinkActive #rlr="routerLinkActive" routerLink="/route"  [ngClass]="rlr.isActive ? 'active' : ''">Rutas</a>
         </li>
         <li class="nav-item">
 
-          <a class="nav-link" routerLinkActive #rlt="routerLinkActive" routerLink="/plane"  [ngClass]="rlt.isActive ? 'active' : ''">Vuelos</a>
+          <a class="nav-link" *ngIf="isUserAdmin()" routerLinkActive #rlt="routerLinkActive" routerLink="/plane"  [ngClass]="rlt.isActive ? 'active' : ''">Vuelos</a>
         </li>
          <li>
-          <a class="nav-link" routerLinkActive #rlf="routerLinkActive" routerLink="/fleet" [ngClass]="rlf.isActive ? 'active' : ''">Flotas</a>
+          <a class="nav-link" *ngIf="isUserAdmin()" routerLinkActive #rlf="routerLinkActive" routerLink="/fleet" [ngClass]="rlf.isActive ? 'active' : ''">Flotas</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/vuelos">Vuelos</a>
+          <a class="nav-link"  *ngIf="isUserAdmin()" href="/vuelos">Vuelos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/mis-vuelos">Mis Vuelos</a>
+          <a class="nav-link" *ngIf="isUserAuthenticated()" href="/mis-vuelos">Mis Vuelos</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/acerca">Acerca De</a>
