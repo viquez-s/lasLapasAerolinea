@@ -2,6 +2,8 @@ import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
 import {FleetService} from "../../../services/fleet.service";
 import {FormControl, FormGroup, Validators} from "@angular/forms";
+import {PlaneService} from "../../../services/planes.service";
+import {RouteService} from "../../../services/route.service";
 
 @Component({
   selector: 'app-form',
@@ -13,7 +15,9 @@ export class FleetFormComponent implements OnInit {
   constructor(
     private router: Router,
     private activeRoute: ActivatedRoute,
-    private service: FleetService
+    private service: FleetService,
+    private PlaneService: PlaneService,
+    private RouteService: RouteService
   ) {
   }
 
@@ -26,6 +30,8 @@ export class FleetFormComponent implements OnInit {
 
   editMode = false;
   model: any = {}
+  planesDropdown: any = [];
+  routesDropdown: any = [];
 
   ngOnInit(): void {
     this.activeRoute.params.subscribe((params) => {
@@ -42,6 +48,14 @@ export class FleetFormComponent implements OnInit {
         });
       }
 
+    });
+    this.PlaneService.get().subscribe((data) => {
+      console.log(data, 'data ')
+      this.planesDropdown = data;
+    });
+    this.RouteService.get().subscribe((data) => {
+      console.log(data, 'data ')
+      this.routesDropdown = data;
     });
   }
 

@@ -9,13 +9,17 @@
     <label  class="form-label">Nombre</label>
     <input formControlName="name" type="text" class="form-control" aria-describedby="emailHelp">
   </div>
-  <div class="mb-3">
-    <label  class="form-label">Avión</label>
-    <textarea formControlName="plane" type="text" class="form-control" aria-describedby="emailHelp"></textarea>
+  <div class="mb-3" *ngIf="planesDropdown">
+    <label class="form-label">Avión</label>
+    <select formControlName="plane" class="form-control">
+      <option *ngFor="let plane of planesDropdown" [value]="plane._id">Avión: {{plane.model}} - {{plane.brand}}</option>
+    </select>
   </div>
-  <div class="mb-3">
+  <div class="mb-3" *ngIf="routesDropdown">
     <label class="form-label">Ruta</label>
-    <textarea formControlName="route" type="text" class="form-control" aria-describedby="emailHelp"></textarea>
+    <select formControlName="route" class="form-control">
+      <option *ngFor="let route of routesDropdown" [value]="route._id">Ruta: {{route.name}} - {{route.duration}}</option>
+    </select>
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
