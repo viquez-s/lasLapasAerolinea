@@ -27,6 +27,10 @@
           <a class="nav-link"  *ngIf="isUserAdmin()" href="/vuelos">Vuelos</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link"  *ngIf="isUserAdmin()" href="/user">Usuarios</a>
+        </li>
+
+        <li class="nav-item">
           <a class="nav-link" *ngIf="isUserAuthenticated()" href="/mis-vuelos">Mis Vuelos</a>
         </li>
         <li class="nav-item">
