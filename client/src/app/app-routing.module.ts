@@ -13,6 +13,7 @@ import {RegisterComponent} from "./components/register/register.component";
 import { UserListComponent } from './components/users/list/user-list.component';
 import {UserFormComponent} from "./components/users/form/user-form.component";
 import {HomeComponent} from "./components/home/home.component";
+import {AboutComponent} from "./components/about/about.component";
 
 const routes: Routes = [
   {path: 'fleet', component: FleetListComponent,},
@@ -32,6 +33,7 @@ const routes: Routes = [
   {path: 'user/:id', component: UserFormComponent},
   {path: 'login', component: LoginComponent},
   {path: 'registro', component: RegisterComponent},
+  {path: 'acerca', component: AboutComponent},
   {path: '', component: HomeComponent},
 
 ];
