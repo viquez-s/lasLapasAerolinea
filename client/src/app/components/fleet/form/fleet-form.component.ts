@@ -42,6 +42,7 @@ export class FleetFormComponent implements OnInit {
           this.model = data;
           this.form.setValue({
             name: data.name,
+            type: data.type,
             plane: data.plane,
             route: data.route,
           });

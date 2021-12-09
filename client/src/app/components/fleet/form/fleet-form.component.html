@@ -10,6 +10,13 @@
     <input formControlName="name" type="text" class="form-control" aria-describedby="emailHelp">
   </div>
   <div class="mb-3" *ngIf="planesDropdown">
+    <label class="form-label">Tipo</label>
+    <select id="type" class="form-control" name="type" formControlName="type">
+      <option value="ida" selected>Ida</option>
+      <option value="ida y vuelta">Ida y Vuelta</option>
+    </select>
+  </div>
+  <div class="mb-3" *ngIf="planesDropdown">
     <label class="form-label">Avión</label>
     <select formControlName="plane" class="form-control">
       <option *ngFor="let plane of planesDropdown" [value]="plane._id">Avión: {{plane.model}} - {{plane.brand}}</option>
