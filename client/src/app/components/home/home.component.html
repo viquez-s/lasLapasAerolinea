@@ -56,58 +56,39 @@
             </div>
           </div>
 
+          <div class="form-group col-12 col-md-6">
+            <label for="username">Pasajeros</label>
+            <input
+              id="asientos"
+              type="text"
+              class="form-control"
+              name="asientos"
+              formControlName="asientos"
+            />
+          </div>
+
+          <div class="form-group col-12 col-md-12">
+            <label for="username">Vuelos Disponibles</label>
+            <select formControlName="fleet" multiple class="form-control">
+              <option *ngFor="let fleet of fleetsDropdown" [value]="fleet._id">Vuelo: {{fleet.name}}</option>
+            </select>
+          </div>
+
+          <div class="mb-3" *ngIf="planesDropdown">
+            <label class="form-label">Horarios</label>
+            <select formControlName="schedules" class="form-control">
+              <option *ngFor="let schedule of schedulesDropdown" [value]="schedule._id">{{schedule.departure}}</option>
+            </select>
+          </div>
+
+          <div class="form-group col-12 col-md-6">
+            <label for="username">Costo Total </label>
+            <input id="precio" *ngIf="totalPrice" type="text" class="form-control" [value]="totalPrice" name="precio" formControlName="precio" disable />
+          </div>
+
 
         </div>
-        <div class="row">
-          <div class="form-group col-12 col-md-6">
-            <label for="username">Origen</label>
-            <input
-              id="origen"
-              type="text"
-              class="form-control"
-              name="origen"
-              formControlName="origen"
-            />
-
-          </div>
-          <div class="form-group col-12 col-md-6">
-            <label for="username">Destino</label>
-            <input
-              id="destino"
-              type="text"
-              class="form-control"
-              name="destino"
-              formControlName="destino"
-
-            />
-
-          </div>
-        </div>
-        <div class="row">
-          <div class="form-group col-12 col-md-6">
-            <label for="username">Salida</label>
-            <input
-              id="salida"
-              type="text"
-              class="form-control"
-              name="salida"
-              formControlName="salida"
-            />
-
-          </div>
-          <div class="form-group col-12 col-md-6">
-            <label for="username">Vuelta</label>
-            <input
-              id="vuelta"
-              type="text"
-              class="form-control"
-              name="vuelta"
-              formControlName="vuelta"
-
-            />
-
-          </div>
-        </div>
+        <button type="submit" class="btn btn-primary">Reservar</button>
       </form>
     </div>
   </div>
