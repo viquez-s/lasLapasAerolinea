@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 
 const TOKEN_KEY = 'auth-token';
 const USER_KEY = 'auth-user';
@@ -8,7 +8,8 @@ const USER_KEY = 'auth-user';
   providedIn: 'root'
 })
 export class TokenStorageService {
-  constructor() { }
+  constructor() {
+  }
 
   signOut(): void {
     window.sessionStorage.clear();
@@ -23,6 +24,7 @@ export class TokenStorageService {
     return window.sessionStorage.getItem(TOKEN_KEY);
   }
 
+
   public saveUser(user: any): void {
     window.sessionStorage.removeItem(USER_KEY);
     window.sessionStorage.setItem(USER_KEY, JSON.stringify(user));
@@ -35,5 +37,17 @@ export class TokenStorageService {
     }
 
     return {};
+  }
+
+  public isUserAdmin(): boolean {
+    let data: any = window.sessionStorage.getItem(USER_KEY);
+    if (data) {
+      data = JSON.parse(data);
+      return  data.user.rol === 'admin';
+    }
+
+    return false;
+
+
   }
 }

@@ -55,17 +55,18 @@ export class RegisterComponent implements OnInit {
           console.log(data);
           if (data.success === true) {
             console.log(data.success, 'data.success');
-            data.roles = data.user.role;
+            // data.roles = data.user.rol;
             this.tokenStorage.saveToken(data.token);
             this.tokenStorage.saveUser(data);
             this.isLoginFailed = false;
             this.isLoggedIn = true;
-            this.rol = this.tokenStorage.getUser().roles;
+            this.rol = this.tokenStorage.getUser().user.rol;
+            console.log(this.rol, 'rol')
             if (this.rol === 'user') {
-              this.router.navigate(['/blog']);
+              this.router.navigate(['/']);
             }
             if (this.rol === 'admin') {
-              this.router.navigate(['/dashboard/profile']);
+              this.router.navigate(['/schedule']);
             }
             console.log(this.rol, 'this.rol');
           } else {

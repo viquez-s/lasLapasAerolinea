@@ -35,12 +35,12 @@ module.exports.signup = async (req, res, next) => {
     } else {
         const newUser = new model(req.body);
         // save the user
-        newUser.save(function (err) {
+        newUser.save(function (err, user) {
             console.log(err);
             if (err) {
                 return res.json({ success: false, msg: 'Username already exists.' });
             }
-            res.json({ success: true, msg: 'Successful created new user.' });
+            res.json({ success: true, user,  msg: 'Successful created new user.' });
         });
     }
 };

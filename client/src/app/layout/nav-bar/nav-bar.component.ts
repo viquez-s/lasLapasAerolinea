@@ -31,6 +31,10 @@ export class NavBarComponent implements OnInit {
     return this.tokenStorageService.getToken;
   }
 
+  get isUserAdmin(): any {
+    return this.tokenStorageService.isUserAdmin;
+  }
+
   get userNameValue(): any {
     const {user} = this.tokenStorageService.getUser();
     console.log(user);
